@@ -17,9 +17,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+        binding.addTodoButton.setOnClickListener { addTodo() }
+
+        // load todos
+    }
+
+    private fun addTodo() {
+        // probably pop up a modal of sorts
+        // include an editText view to add Todo
+        // include a save/add button
+        // new todo shows up in list
     }
 }
