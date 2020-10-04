@@ -6,7 +6,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".TodoTracker.TodoTrackerFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/todos"
+            app:layout_constraintBottom_toTopOf="@+id/addTodoButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
 
         <TextView
             android:id="@+id/title"
@@ -25,12 +34,6 @@
             app:layout_constraintTop_toBottomOf="@+id/title"
             tools:layout_editor_absoluteX="0dp">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/todos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.recyclerview.widget.RecyclerView>
         </ScrollView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
