@@ -16,7 +16,7 @@ class TodoTrackerFragment : Fragment() {
 
         val binding: ActivityMainBinding = DataBindingUtil.inflate(inflater, R.layout.activity_main, container, false)
 
-        val todoTrackerViewModel = ViewModelProvider.
+        val todoTrackerViewModel;
 
         return super.onCreateView(inflater, container, savedInstanceState)
     }
