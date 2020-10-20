@@ -6,7 +6,7 @@
     <data>
         <variable
             name="todoViewModel"
-            type="com.zoose.lista.TodoViewModel" />
+            type="com.zoose.lista.Todo.TodoViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +18,7 @@
             android:id="@+id/todos"
             app:layout_constraintBottom_toTopOf="@+id/addTodoButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title"
             android:layout_width="0dp"
             android:layout_height="0dp"/>
