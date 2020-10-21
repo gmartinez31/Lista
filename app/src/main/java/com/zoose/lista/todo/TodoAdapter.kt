@@ -1,4 +1,4 @@
-package com.zoose.lista.Todo
+package com.zoose.lista.todo
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="todoViewModel"
-            type="com.zoose.lista.Todo.TodoViewModel" />
+            type="com.zoose.lista.todo.TodoViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

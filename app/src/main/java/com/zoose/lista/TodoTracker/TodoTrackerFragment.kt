@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.zoose.lista.R
-import com.zoose.lista.Todo.TodoAdapter
+import com.zoose.lista.todo.TodoAdapter
 import com.zoose.lista.databinding.ActivityMainBinding
 
 class TodoTrackerFragment : Fragment() {
@@ -18,8 +17,11 @@ class TodoTrackerFragment : Fragment() {
 
         val binding: ActivityMainBinding = DataBindingUtil.inflate(inflater, R.layout.activity_main, container, false)
 
-        val todoTrackerViewModel;
+//        val todoTrackerViewModel = TodoViewModel()
         val adapter = TodoAdapter()
+
+//        binding.todoViewModel = todoTrackerViewModel
+        binding.todos.adapter = adapter
 
         return super.onCreateView(inflater, container, savedInstanceState)
     }
