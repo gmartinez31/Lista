@@ -1,9 +1,12 @@
 package com.zoose.lista.todo
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 
-public class TodoViewModel : ViewModel() {
+public class TodoViewModel(
+    val db: TodoDao,
+    application: Application) : AndroidViewModel(application) {
 
     private val _todo = MutableLiveData<Todo>()
 //    public val todo = LiveData<Todo>
