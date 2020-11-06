@@ -23,12 +23,19 @@ public class TodoViewModel(
         }
     }
 
-    private suspend fun getTodosFromDB(): LiveData<List<Todo>> {
+    private fun getTodosFromDB(): LiveData<List<Todo>> {
         return db.getAllTodos()
     }
 
+    fun addTodo() {
+        viewModelScope.launch {
+            // grab todos from fragment or main activity in this case
+            insert(todo)
+            _todos.value = getTodosFromDB().value
+        }
+    }
 
-    public fun addTodo() {
-
+    private suspend fun insert(todo: Todo) {
+        db.insert(todo)
     }
 }
